@@ -1,32 +1,23 @@
-import React from 'react'
-import Header from './components/Header'
-//import { Outlet } from 'react-router-dom'
-import './app.css'
-import Footer from './components/Footer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Clima from './routes/Clima'
-import Detalhes from './routes/Detalhes'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./app.css";
+
+import Weather from "./routes/Weather";
+import WeatherData from "./routes/WeatherData";
 
 const App = () => {
   return (
     <BrowserRouter>
-    <div className="container">
-      <Header />
-      <Routes>
-        <Route path='/' element={<Clima />} />
-        <Route path='/detalhes' element={<Detalhes />} />
-      </Routes>
-      <Footer />
+    <div className="fundo">
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Weather />} />
+          <Route exact path="/details/:city" element={<WeatherData />} />
+        </Routes>
+      </div>
       </div>
     </BrowserRouter>
+  );
+};
 
-   /* <div className='container'>
-        <Header/> 
-        <Outlet />
-        <Footer/>
-
-    </div>*/
-  )
-}
-
-export default App
+export default App;

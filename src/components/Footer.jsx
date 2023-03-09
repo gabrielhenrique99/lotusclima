@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Detalhes from '../routes/Detalhes'
 
-const Footer = () => {
+
+const Footer = ({cityName}) => {
   return (
     <div>
-      <Link to={`/detalhes`}>Exibir Detalhes</Link>
+      <Link to={`details/${cityName}`}>Exibir Detalhes</Link>
     </div>
   )
 }
