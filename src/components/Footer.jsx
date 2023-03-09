@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Detalhes from '../routes/Detalhes'
 
 const Footer = () => {
   return (
     <div>
-        <button value="exibir">Exibir Detalhes</button>
+      <Link to={`/detalhes`}>Exibir Detalhes</Link>
     </div>
   )
 }
